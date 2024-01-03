@@ -1,0 +1,24 @@
+/* company project css starts */
+.bg-antiquewhite{
+  background-color: antiquewhite;
+}
+
+.w-10 {
+  height: 100%;
+  width: 23vw;
+}
+
+.borderWhite {
+  border: 3px solid white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.imgContainer {
+  width: 71.9vw;
+  height: 100%;
+}
+
+/* company project css ends */
