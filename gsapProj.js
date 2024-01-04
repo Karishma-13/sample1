@@ -59,47 +59,70 @@
 
 
 
-
 // GSAP animation for moving images in a sequence from right to left  
+// const img1 = document.querySelector('.img1');
+// const img2 = document.querySelector('.img2');
+// const img3 = document.querySelector('.img3');
+// const img4 = document.querySelector('.img4');
+// const img5 = document.querySelector('.img5');
+
+// const duration = 13;
+
+// gsap.to(img1, {
+//   x: '-400%', 
+//   duration: duration,
+//   ease: 'linear',
+//   delay: 0,
+// });
+
+// gsap.to(img2, {
+//   x: '-400%',
+//   duration: duration,
+//   ease: 'linear',
+//   delay: 0,
+// });
+
+// gsap.to(img3, {
+//   x: '-400%',
+//   duration: duration,
+//   ease: 'linear',
+//   delay: 0,
+// });
+
+// gsap.to(img4, {
+//   x: '-400%',
+//   duration: duration,
+//   ease: 'linear',
+//   delay: 0,
+// });
+
+// gsap.to(img5, {
+//   x: '-400%',
+//   duration: duration,
+//   ease: 'linear',
+//   delay: 0,
+// });
+
+
+
+
+
+// GSAP animation for moving images in a sequence from left to right  
 const img1 = document.querySelector('.img1');
 const img2 = document.querySelector('.img2');
 const img3 = document.querySelector('.img3');
 const img4 = document.querySelector('.img4');
 const img5 = document.querySelector('.img5');
 
-const duration = 13;
+gsap.fromTo(img5, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+gsap.fromTo(img4, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+gsap.fromTo(img3, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+gsap.fromTo(img2, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+gsap.fromTo(img1, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
 
-gsap.to(img1, {
-  x: '-400%', 
-  duration: duration,
-  ease: 'linear',
-  delay: 0,
-});
 
-gsap.to(img2, {
-  x: '-400%',
-  duration: duration,
-  ease: 'linear',
-  delay: 0,
-});
 
-gsap.to(img3, {
-  x: '-400%',
-  duration: duration,
-  ease: 'linear',
-  delay: 0,
-});
 
-gsap.to(img4, {
-  x: '-400%',
-  duration: duration,
-  ease: 'linear',
-  delay: 0,
-});
 
-gsap.to(img5, {
-  x: '-400%',
-  duration: duration,
-  ease: 'linear',
-  delay: 0,
-});
+
+

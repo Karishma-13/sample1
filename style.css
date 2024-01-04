@@ -16,10 +16,42 @@
 }
 
 .imgContainer {
-  width: 35vw;
+  width: 38vw;
   height: 100%;
 }
 
 .plpr_12rem {
-  padding-left: 6rem;
+  padding-left: 8rem;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.pb-3 {
+  padding-bottom: 1rem !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
 }
