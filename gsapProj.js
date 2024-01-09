@@ -121,9 +121,43 @@
 
 
 
-// GSAP animation for moving images in a sequence from left to right without any lagging
-const imagesList = document.querySelectorAll('.plpr_12rem');
+// // GSAP animation for moving images in a sequence from left to right without any lagging
+// const imagesList = document.querySelectorAll('.plpr_12rem');
 
-imagesList.forEach((item, index)=>{
-  gsap.fromTo(item, {x: '-500%'}, {x : '0%', duration: 23, delay: 0, ease: 'none'})
-})
+// imagesList.forEach((item, index)=>{
+//   gsap.fromTo(item, {x: '-500%'}, {x : '0%', duration: 23, delay: 0, ease: 'none'})
+// })
+
+
+
+// GSAP animation for moving images in a sequence from left to right without any lagging , with consistent & variable speed
+const imagesList = document.querySelectorAll('.plpr_12rem');
+const speedSlider = document.getElementById('speedSlider');
+const speedValue = document.getElementById('speedValue');
+
+let animationSpeed = 1; // Default animation speed
+
+// Function to update animation speed based on the slider value
+function updateAnimationSpeed() {
+    animationSpeed = speedSlider.value;
+    speedValue.textContent = animationSpeed;
+}
+
+// Event listener for the slider input
+speedSlider.addEventListener('input', updateAnimationSpeed);
+
+imagesList.forEach((item, index) => {
+    gsap.fromTo(item, { x: '-500%' }, { x: '0%', duration: animationSpeed, delay: 0, ease: 'none' });
+});
+
+// Initial call to set up the default speed
+updateAnimationSpeed();
+
+
+
+
+
+
+
+
+
