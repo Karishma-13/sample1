@@ -105,24 +105,25 @@
 
 
 
-
-
 // GSAP animation for moving images in a sequence from left to right  
-const img1 = document.querySelector('.img1');
-const img2 = document.querySelector('.img2');
-const img3 = document.querySelector('.img3');
-const img4 = document.querySelector('.img4');
-const img5 = document.querySelector('.img5');
+// const img1 = document.querySelector('.img1');
+// const img2 = document.querySelector('.img2');
+// const img3 = document.querySelector('.img3');
+// const img4 = document.querySelector('.img4');
+// const img5 = document.querySelector('.img5');
 
-gsap.fromTo(img5, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
-gsap.fromTo(img4, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
-gsap.fromTo(img3, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
-gsap.fromTo(img2, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
-gsap.fromTo(img1, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
-
-
+// gsap.fromTo(img5, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+// gsap.fromTo(img4, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+// gsap.fromTo(img3, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+// gsap.fromTo(img2, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
+// gsap.fromTo(img1, { x: '-500%' }, { x: '0%', duration: 23, delay: 0})
 
 
 
 
+// GSAP animation for moving images in a sequence from left to right without any lagging
+const imagesList = document.querySelectorAll('.plpr_12rem');
 
+imagesList.forEach((item, index)=>{
+  gsap.fromTo(item, {x: '-500%'}, {x : '0%', duration: 23, delay: 0})
+})
