@@ -125,5 +125,5 @@
 const imagesList = document.querySelectorAll('.plpr_12rem');
 
 imagesList.forEach((item, index)=>{
-  gsap.fromTo(item, {x: '-500%'}, {x : '0%', duration: 23, delay: 0})
+  gsap.fromTo(item, {x: '-500%'}, {x : '0%', duration: 23, delay: 0, ease: 'none'})
 })
