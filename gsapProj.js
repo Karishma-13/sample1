@@ -130,28 +130,32 @@
 
 
 
+
 // GSAP animation for moving images in a sequence from left to right without any lagging , with consistent & variable speed
-const imagesList = document.querySelectorAll('.plpr_12rem');
-const speedSlider = document.getElementById('speedSlider');
-const speedValue = document.getElementById('speedValue');
+    const imgList = document.querySelectorAll('.img');
+    const speedSlider = document.getElementById('speedSlider');
+    const speedValue = document.getElementById('speedValue');
+  
 
-let animationSpeed = 1; // Default animation speed
+    let defaultSpeed = 23;       // set the default duration(or speed) value in slider
+    speedSlider.value = defaultSpeed;
+    speedValue.textContent = defaultSpeed;      // it will display the bydefault duration(or speed) i.e. '23'
+  
 
-// Function to update animation speed based on the slider value
-function updateAnimationSpeed() {
-    animationSpeed = speedSlider.value;
-    speedValue.textContent = animationSpeed;
-}
+    // when user adjust the slider, addEventListener() function listens the 'input' event and calls 'updateSpeed()' function
+    speedSlider.addEventListener('input', updateSpeed);    
+  
 
-// Event listener for the slider input
-speedSlider.addEventListener('input', updateAnimationSpeed);
-
-imagesList.forEach((item, index) => {
-    gsap.fromTo(item, { x: '-500%' }, { x: '0%', duration: animationSpeed, delay: 0, ease: 'none' });
-});
-
-// Initial call to set up the default speed
-updateAnimationSpeed();
+    function updateSpeed() {
+      const speed = parseInt(speedSlider.value);  // speedSlider.value = this is a string value, so we are converting it in integer value
+      speedValue.textContent = speed;            // it will display the updated duration(or speed) 
+  
+      imgList.forEach((item, index) => {
+        gsap.fromTo(item, { x: '-500%' }, { x: '0%', duration: speed, repeat: 0, ease: 'none' });
+      });
+    }
+  
+    updateSpeed();      // this is called initially for displaying images when the default duration is '23'
 
 
 
